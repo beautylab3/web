@@ -1,0 +1,843 @@
+@charset "utf-8";
+*{
+  padding: 0;
+  margin: 0;
+  font-family: arial;
+}
+h1{
+  display: none;
+}
+header .header{
+  width: 40vw;
+  height: 100vh;
+  background-color: #00224D;
+  margin-left: 60%;
+  position: fixed;
+}
+header .tag_area01{
+  max-width: 600px;
+  margin: 5em auto 2.5em;
+  position: relative;
+  width: 90%;
+}
+header .tag_area01:before {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  background: #00224D;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: +1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .tag_area01 ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+header .tag_area01 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tag_area01 ul li {
+  margin: 0 .3em .3em 0;
+}
+.tag_area01 ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100px;
+  height: 34px;
+  padding: 0 1em;
+  background-color: #00224D;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+  box-sizing: border-box;
+}
+.tag_area01 ul li a:hover {
+  background-color: #FF204E;
+  border: 1px solid #FF204E;
+  color: #fff;
+}
+.tag_area01 ul li a:before {
+  content: "#";
+  padding-right: 2px;
+}
+header .search .search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 90%;
+    padding-left: 5%;
+}
+header .search .search-container input[type=text] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 70%;
+    background-color: #00224D;
+}
+header .search .search-container button {
+    padding: 10px 20px;
+    background-color: #FF204E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+header .sns{
+  display: flex;
+  width: 90%;
+  padding-left: 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+header .sns p{
+  color: #fff;
+  font-size: 14px;
+  font-family: CENTURY;
+  padding-right: 20px;
+}
+header .sns img{
+  height: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+header .author{
+  width: 90%;
+  padding-left: 5%;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+header .author p{
+  color: #fff;
+  font-size: 14px;
+  font-family: CENTURY;
+}
+header .author ul li{
+  list-style: none;
+  display: flex;
+}
+header .author ul img{
+  height: 80px;
+  padding-top: 20px;
+}
+header .author ul p{
+  font-size: 12px;
+  font-family: CENTURY;
+  color: #fff;
+  padding-bottom: 10px;
+}
+header .author .author_name{
+  width: 120px;
+  height: auto;
+  text-align: center;
+}
+header .project_foundation{
+  width: 90%;
+  padding-left: 5%;
+  padding-top: 3%;
+}
+.foundation {
+  display: inline-flex;
+  align-items: center;
+  background-color: #FF204E;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.button-icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #e25d53;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 17px;
+}
+.links {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 3.5px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+}
+.links a::after {
+  content: '\2197'; /* 斜め矢印 */
+  color: #FF204E;
+  font-size: 16px;
+  margin-left: 5px;
+}
+header .copyright{
+  padding-left: 5%;
+  padding-top: 5%;
+}
+header .copyright ul{
+  display: flex;
+}
+header .copyright ul li{
+  list-style: none;
+}
+header .copyright ul li a{
+  color: #fff;
+  font-family: serif;
+  font-size: 10px;
+  padding-right: 20px;
+}
+header .copyright p{
+  color: #fff;
+  font-family: serif;
+  font-size: 10px;
+  padding-top: 10px;
+}
+@media screen and (min-width:1068px){
+  header .header-768{
+  display: none;
+}
+}
+@media screen and (max-width:1067.98px){
+  header .header{
+    display: none;
+  }
+  header .header-768{
+    background: #000;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 100;
+  }
+  header .header-768 .logo img{
+    height: 40px;
+}
+  header .header-768 .logo{
+    padding: 12px;
+    position: absolute;
+    left: 2vw;
+    z-index: 100;
+    text-decoration: none;
+  }
+  .drawer_hidden {
+  display: none;
+}
+header .header-768 .drawer_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 7%;
+  z-index: 100;
+  cursor: pointer;
+  padding: 0px;
+  height: 60px;
+}
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 30px;
+  border-radius: 0px;
+  background: #fff;
+  transition: 0.5s;
+  position: absolute;
+}
+.drawer_open span:before {
+  bottom: 10px;
+}
+.drawer_open span:after {
+  top: 10px;
+}
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+header .nav_content {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  bottom: 100%;
+  z-index: 99;
+  background-color: #000;
+  transition: .0s;
+  text-align: center;
+}
+#drawer_input:checked ~ .nav_content {
+  bottom: 10vh;
+  top: 59px;
+}
+header .header1{
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+}
+header .tag_area01{
+  max-width: 600px;
+  margin: 5em auto 2.5em;
+  position: relative;
+  width: 90%;
+}
+header .tag_area01:before {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  background: #000;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: +1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .tag_area01 ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+header .tag_area01 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tag_area01 ul li {
+  margin: 0 .3em .3em 0;
+}
+.tag_area01 ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100px;
+  height: 34px;
+  padding: 0 1em;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #e3d7a3;
+  font-size: 12px;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+  box-sizing: border-box;
+}
+.tag_area01 ul li a:hover {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #000;
+}
+.tag_area01 ul li a:before {
+  content: "#";
+  padding-right: 2px;
+}
+header .search .search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 90%;
+    padding-left: 5%;
+}
+header .search .search-container input[type=text] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 70%;
+    background-color: #000;
+}
+header .search .search-container button {
+    padding: 10px 20px;
+    background-color: #888;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+header .author{
+  width: 90%;
+  padding-left: 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+header .author p{
+  color: #fff;
+  font-size: 14px;
+  font-family: CENTURY;
+}
+header .author ul li{
+  list-style: none;
+  display: flex;
+}
+header .author ul img{
+  height: 80px;
+  padding-top: 30px;
+}
+header .author ul p{
+  font-size: 12px;
+  font-family: CENTURY;
+  color: #fff;
+  padding-bottom: 20px;
+}
+header .author .author_name{
+  width: 120px;
+  height: auto;
+  text-align: center;
+}
+header .project_foundation{
+  width: 90%;
+  padding-left: 5%;
+  padding-top: 3%;
+}
+.foundation {
+  display: inline-flex;
+  align-items: center;
+  background-color: #FF204E;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.button-icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #e25d53;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 17px;
+}
+.links {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 3.5px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+}
+.links a::after {
+  content: '\2197'; /* 斜め矢印 */
+  color: #FF204E;
+  font-size: 16px;
+  margin-left: 5px;
+}
+header .copyright{
+  padding-left: 5%;
+  text-align: left;
+}
+header .copyright ul{
+  display: flex;
+}
+header .copyright ul li{
+  list-style: none;
+}
+header .copyright ul li a{
+  color: #fff;
+  font-family: serif;
+  font-size: 10px;
+  padding-right: 20px;
+}
+header .copyright p{
+  color: #fff;
+  font-family: serif;
+  font-size: 10px;
+  padding-top: 10px;
+}
+}
+
+
+
+
+
+
+
+
+
+main{
+  width: 55%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+@media screen and (max-width:1067.98px){
+  main{
+    width: 100%;
+  }
+}
+@media screen and (min-width:1068px){
+  main .firstview{
+    width: 100%;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+  }
+}
+@media screen and (max-width:1067.98px){
+  main .firstview-1068{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-image: url(background.jpg);
+    background-size: cover;
+    z-index: 0;
+  }
+}
+@media screen and (min-width:1068px){
+main {
+  padding: 40px 0;
+}
+main .top .logo img{
+  width: 160px;
+  display: flex;             /* 横並びに配置 */
+  justify-content: center;   /* 横方向の中央揃え */
+  align-items: center;       /* 縦方向の中央揃え（必要に応じて） */
+  gap: 0px;                 /* ボタン間の隙間 */
+  padding: 0px;             /* お好みで余白を追加 */
+}
+main hr{
+  width: 100%;
+  color: #ddd;
+}
+main .button-container {
+  display: flex;             /* 横並びに配置 */
+  justify-content: center;   /* 横方向の中央揃え */
+  align-items: center;       /* 縦方向の中央揃え（必要に応じて） */
+  gap: 20px;                 /* ボタン間の隙間 */
+  padding: 20px;             /* お好みで余白を追加 */
+}
+
+    /* ボタンの基本スタイル */
+main .button-container a{
+  padding: 0px 10px;
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+main .button-container .a{
+  padding: 0px 10px;
+  font-size: 15px;
+  color: #FF204E;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+    /* ボタンにホバー時のエフェクト */
+main .button-container button:hover {
+  color: #888;
+}
+
+main .top{
+  display: flex;                   /* 横並びに配置 */
+  justify-content: space-between;  /* 左右の端に配置 */
+  align-items: center;             /* 縦方向中央揃え */
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+}
+
+main .top .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+main .login-btn {
+  background-color:  #FF204E;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+main .login-btn a{
+  text-decoration: none;
+  color: #fff;
+}
+
+main .login-btn:hover {
+  background-color: #A0153E;
+}
+
+main .container{
+  padding-top: 5vh;
+}
+main .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+/* 商品カード */
+main .product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+main .product-card button a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bolder;
+}
+main .product-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+main .product-card img {
+  width: 100%;
+  display: block;
+}
+
+main .product-info {
+  padding: 15px;
+}
+
+main .product-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+main .product-info p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+main .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e;
+  display: block;
+  margin-bottom: 15px;
+}
+
+main .product-info button {
+  background-color: #FF204E;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+main .product-info button:hover {
+  background-color: #A0153E;
+}
+}
+@media screen and (max-width: 1067.98px) {
+  /* メイン全体の余白調整 */
+  main {
+    padding: 20px 0;
+  }
+
+  /* ヘッダー部分：縦方向にスタックさせ、中央寄せに */
+  main .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-top: 60px;
+    background-color: #f8f8f8;
+  }
+
+  main .top .logo {
+    display: none;
+  }
+
+  /* ボタンコンテナ：縦並びに変更し、間隔を縮小 */
+  main .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  /* ボタン（リンク）の基本スタイル：フォントサイズとパディングを調整 */
+  main .button-container a {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 90%;
+    text-align: center;
+  }
+  /* クラス"a"が付いたリンク */
+  main .button-container .a {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #FF204E;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* ログインボタン：上部に余白を追加して目立たせる */
+  main .login-btn {
+    background-color: #FF204E;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  main .login-btn a {
+    text-decoration: none;
+    color: #fff;
+  }
+  main .login-btn:hover {
+    background-color: #A0153E;
+  }
+
+  /* コンテナの上部余白 */
+  main .container {
+    padding-top: 3vh;
+  }
+
+  /* 商品グリッド：1カラムレイアウト（必要に応じて2カラムなどに変更可） */
+  main .product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+
+  /* 商品カード */
+  main .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+  main .product-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  main .product-card img {
+    width: 100%;
+    display: block;
+  }
+
+  /* 商品情報エリア */
+  main .product-info {
+    padding: 10px;
+  }
+  main .product-info h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  main .product-info p {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  main .price {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* 商品カード内のボタン */
+  main .product-info button {
+    background-color: #FF204E;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+  main .product-info button a{
+    text-decoration: none;
+    color: #fff;
+  }
+  main .product-info button:hover {
+    background-color: #A0153E;
+  }
+}
+
+
+/* フッター */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
