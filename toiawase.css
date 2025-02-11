@@ -540,6 +540,58 @@ main{
     z-index: 0;
   }
 }
+.c-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.c-form__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.c-form__label,
+.c-form__input {
+  padding: 10px;
+}
+.c-form__label {
+  width: 90%;
+  color: #00224D;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.c-form__input {
+  width: 90%;
+  font-size: 16px;
+  border: solid 1px #333;
+  border-radius: 4px;
+}
+.c-form__input:focus-visible {
+  outline: #FF204E auto 1px;
+}
+textarea.c-form__input {
+  height: 160px;
+}
+.c-form__submit {
+  text-align: center;
+  padding-bottom: 10vh;
+}
+.c-form__submit button {
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #fff;
+  background-color: #FF204E;
+  border: solid 5px #FF204E;
+  border-radius: 4px;
+  padding: 5px 32px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.c-form__submit button:hover {
+  color: #FFF;
+  background-color: #A0153E;
+  border: solid 5px #A0153E;
+}
 @media screen and (min-width:1068px){
 main {
   padding: 40px 0;
@@ -626,69 +678,11 @@ main .login-btn:hover {
 main .container{
   padding-top: 5vh;
 }
-main .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
 
-/* 商品カード */
-main .product-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-main .product-card button a{
-  text-decoration: none;
-  color: #fff;
-  font-weight: bolder;
-}
-main .product-card:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
 
-main .product-card img {
-  width: 100%;
-  display: block;
-}
 
-main .product-info {
-  padding: 15px;
-}
 
-main .product-info h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
 
-main .product-info p {
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-
-main .price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #e;
-  display: block;
-  margin-bottom: 15px;
-}
-
-main .product-info button {
-  background-color: #FF204E;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
-}
-
-main .product-info button:hover {
-  background-color: #A0153E;
-}
 }
 @media screen and (max-width: 1067.98px) {
   /* メイン全体の余白調整 */
@@ -771,68 +765,10 @@ main .product-info button:hover {
     padding-left: 8%;
     width: 90%;
   }
-
-  /* 商品グリッド：1カラムレイアウト（必要に応じて2カラムなどに変更可） */
-  main .product-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 15px;
-  }
-
-  /* 商品カード */
-  main .product-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-  }
-  main .product-card:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  main .product-card img {
-    width: 100%;
-    display: block;
-  }
-
-  /* 商品情報エリア */
-  main .product-info {
-    padding: 10px;
-  }
-  main .product-info h2 {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-  main .product-info p {
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
-  main .price {
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  /* 商品カード内のボタン */
-  main .product-info button {
-    background-color: #FF204E;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-    font-size: 14px;
-    width: 100%;
-    text-align: center;
-  }
-  main .product-info button a{
-    text-decoration: none;
-    color: #fff;
-  }
-  main .product-info button:hover {
-    background-color: #A0153E;
+  main h1{
+    font-size: 25px;
+    padding-top: 130px;
+    padding-bottom: 50px;
   }
 }
 
