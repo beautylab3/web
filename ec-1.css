@@ -626,12 +626,13 @@ main .body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  display: flex;
-  background-color: #f8f8f8;
   margin-top: 30px;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
 }
 .sidebar {
-  width: 80%;
+  width: 37.5%;
   margin-right: 20px;
   background: #ffffff;
   padding: 15px;
@@ -663,226 +664,297 @@ main .sidebar a:hover {
   background: #FF204E;
   color: white;
 }
-main .content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
-  gap: 20px;
-}
-main .product {
+main .product-container {
   background: white;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 800px;
 }
-main .product:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+main .product-images {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-main .product img {
+main .product-images img {
   width: 100%;
   border-radius: 8px;
 }
-main .product h3 {
-  font-size: 16px;
-  margin: 10px 0 5px;
-  color: #333;
+main .product-details {
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 20px;
 }
-main .product p {
-  font-size: 14px;
-  color: #555;
-}
-main .product .price {
+main .product-title {
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 10px;
+}
+main .product-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+main .product-price {
+  font-size: 20px;
+  font-weight: bold;
   color: #e74c3c;
-  margin-top: 5px;
+  margin-bottom: 15px;
+}
+main .color-options {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+main .color-option {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+main .buttons {
+  display: flex;
+  gap: 10px;
+}
+main .button {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  width: 150px;
+  border: none;
+}
+main .dao-button {
+  background: #00224D;
+  color: white;
+}
+main .dao-button:hover {
+  background: #5D0E41;
 }
 main .buy-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
   background: #FF204E;
   color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background 0.3s;
 }
 main .buy-button:hover {
   background: #A0153E;
 }
-main .buy-button a{
+main a{
   color: #fff;
   text-decoration: none;
 }
 }
 @media screen and (max-width: 1067.98px) {
   /* メイン全体の余白調整 */
-  main {
-    padding: 0
-  }
+main {
+  padding: 0
+}
 
-  /* ヘッダー部分：縦方向にスタックさせ、中央寄せに */
-  main .top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-    background-color: #f8f8f8;
-  }
+/* ヘッダー部分：縦方向にスタックさせ、中央寄せに */
+main .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  background-color: #f8f8f8;
+}
 
-  main .top .logo {
-    display: none;
-  }
+main .top .logo {
+  display: none;
+}
 
-  /* ボタンコンテナ：縦並びに変更し、間隔を縮小 */
-  main .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-  }
+/* ボタンコンテナ：縦並びに変更し、間隔を縮小 */
+main .button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
 
-  /* ボタン（リンク）の基本スタイル：フォントサイズとパディングを調整 */
-  main .button-container a {
-    padding: 8px 12px;
-    font-size: 14px;
-    color: #000;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    width: 90%;
-    text-align: center;
-  }
-  /* クラス"a"が付いたリンク */
-  main .button-container .a {
-    padding: 8px 12px;
-    font-size: 14px;
-    color: #FF204E;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    text-align: center;
-  }
+/* ボタン（リンク）の基本スタイル：フォントサイズとパディングを調整 */
+main .button-container a {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 90%;
+  text-align: center;
+}
+/* クラス"a"が付いたリンク */
+main .button-container .a {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #FF204E;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
 
-  /* ログインボタン：上部に余白を追加して目立たせる */
-  main .login-btn {
-    background-color: #FF204E;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-  }
-  main .login-btn a {
-    text-decoration: none;
-    color: #fff;
-  }
-  main .login-btn:hover {
-    background-color: #A0153E;
-  }
+/* ログインボタン：上部に余白を追加して目立たせる */
+main .login-btn {
+  background-color: #FF204E;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+main .login-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+main .login-btn:hover {
+  background-color: #A0153E;
+}
 
-  .sidebar {
-    margin-right: 20px;
-    margin-top: 30px;
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .sidebar h2 {
-    font-size: 18px;
-    margin-bottom: 12px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #FF204E;
-    color: #FF204E;
-  }
-  .sidebar a {
-    text-decoration: none;
-  　color: #000;
-    padding: 8px;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-    font-weight: bold;
-    display: inline-block;
-    margin: 5px;
-  }
-  main .sidebar .a{
-    color: #303030;
-  }
-  .sidebar a:hover {
-    background: #FF204E;
-    color: white;
-  }
-  .content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .product {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  }
-  .product img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  .product h3 {
-    font-size: 16px;
-    margin: 10px 0 5px;
-    color: #333;
-  }
-  .product p {
-    font-size: 14px;
-    color: #555;
-  }
-  .product .price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #e74c3c;
-    margin-top: 5px;
-  }
-  main .buy-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #FF204E;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  main .buy-button:hover {
-    background: #A0153E;
-  }
-  main .buy-button a{
-    color: #fff;
-    text-decoration: none;
-  }
-
+.sidebar {
+  margin-right: 20px;
+  margin-top: 30px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #FF204E;
+  color: #FF204E;
+}
+.sidebar a {
+  text-decoration: none;
+　color: #000;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+  display: inline-block;
+  margin: 5px;
+}
+main .sidebar .a{
+  color: #303030;
+}
+.sidebar a:hover {
+  background: #FF204E;
+  color: white;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f8f8f8;
+            justify-content: center;
+        }
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+        }
+        .product-images {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .product-images img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .product-details {
+            padding-top: 10px;
+            text-align: center;
+        }
+        .product-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .product-description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 12px;
+        }
+        .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 15px;
+        }
+        .color-option {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+        .button {
+            width: 100%;
+            max-width: 250px;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+        .dao-button {
+            background: #00224D;
+            color: white;
+        }
+        .dao-button:hover {
+            background: #5D0E41;
+        }
+        .buy-button {
+            background: #FF204E;
+            color: white;
+        }
+        .buy-button:hover {
+            background: #A0153E;
+        }
+        main a{
+          text-decoration: none;
+          color: #fff;
+        }
 }
 
 
