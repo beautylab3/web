@@ -622,72 +622,96 @@ main .login-btn a{
 main .login-btn:hover {
   background-color: #A0153E;
 }
-
-main .container{
-  padding-top: 5vh;
+main .body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  background-color: #f8f8f8;
+  margin-top: 30px;
 }
-main .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
-/* 商品カード */
-main .product-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-main .product-card button a{
-  text-decoration: none;
-  color: #fff;
-  font-weight: bolder;
-}
-main .product-card:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-main .product-card img {
-  width: 100%;
-  display: block;
-}
-
-main .product-info {
+.sidebar {
+  width: 80%;
+  margin-right: 20px;
+  background: #ffffff;
   padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-main .product-info h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.sidebar h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding-bottom: 5px;
+  border-bottom: 1.5px solid #FF204E;
+  color: #FF204E;
 }
-
-main .product-info p {
+.sidebar a {
+  display: block;
+  text-decoration: none;
+　color: black;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
   font-size: 14px;
-  margin-bottom: 15px;
+  font-family: Arial;
 }
-
-main .price {
+main .sidebar .a{
+  color: #303030;
+}
+main .sidebar a:hover {
+  background: #FF204E;
+  color: white;
+}
+main .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  gap: 20px;
+}
+main .product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main .product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+main .product img {
+  width: 100%;
+  border-radius: 8px;
+}
+main .product h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  color: #333;
+}
+main .product p {
+  font-size: 14px;
+  color: #555;
+}
+main .product .price {
   font-size: 18px;
   font-weight: bold;
-  color: #e;
-  display: block;
-  margin-bottom: 15px;
+  color: #e74c3c;
+  margin-top: 5px;
 }
-
-main .product-info button {
-  background-color: #FF204E;
-  color: #fff;
+main .buy-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #FF204E;
+  color: white;
   border: none;
-  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
   cursor: pointer;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s;
 }
-
-main .product-info button:hover {
-  background-color: #A0153E;
+main .buy-button:hover {
+  background: #A0153E;
 }
 }
 @media screen and (max-width: 1067.98px) {
@@ -765,75 +789,92 @@ main .product-info button:hover {
     background-color: #A0153E;
   }
 
-  /* コンテナの上部余白 */
-  main .container {
-    padding-top: 3vh;
-    padding-left: 8%;
-    width: 90%;
-  }
-
-  /* 商品グリッド：1カラムレイアウト（必要に応じて2カラムなどに変更可） */
-  main .product-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 15px;
-  }
-
-  /* 商品カード */
-  main .product-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-  }
-  main .product-card:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  main .product-card img {
+  .sidebar {
+    margin-right: 20px;
+    margin-top: 30px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    display: block;
-  }
-
-  /* 商品情報エリア */
-  main .product-info {
-    padding: 10px;
-  }
-  main .product-info h2 {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-  main .product-info p {
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
-  main .price {
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  /* 商品カード内のボタン */
-  main .product-info button {
-    background-color: #FF204E;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-    font-size: 14px;
-    width: 100%;
+    margin-bottom: 30px;
     text-align: center;
   }
-  main .product-info button a{
+  .sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #FF204E;
+    color: #FF204E;
+  }
+  .sidebar a {
     text-decoration: none;
-    color: #fff;
+  　color: #000;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px;
   }
-  main .product-info button:hover {
-    background-color: #A0153E;
+  main .sidebar .a{
+    color: #303030;
   }
+  .sidebar a:hover {
+    background: #FF204E;
+    color: white;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .product {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  .product img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .product h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: #333;
+  }
+  .product p {
+    font-size: 14px;
+    color: #555;
+  }
+  .product .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 5px;
+  }
+  main .buy-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #FF204E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  main .buy-button:hover {
+    background: #A0153E;
+  }
+
 }
 
 
