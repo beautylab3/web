@@ -622,383 +622,310 @@ main .login-btn a{
 main .login-btn:hover {
   background-color: #A0153E;
 }
-main .body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+main h1{
+  padding-top: 100px;
+}
+
+main .container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
   padding: 20px;
-  margin-top: 30px;
-  background-color: #f8f8f8;
-  display: flex;
-  justify-content: center;
-}
-.sidebar {
-  width: 37.5%;
-  margin-right: 20px;
-  background: #ffffff;
-  padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content:space-around
 }
-.sidebar h2 {
-  font-size: 16px;
-  margin-bottom: 12px;
-  padding-bottom: 5px;
-  border-bottom: 1.5px solid #FF204E;
-  color: #FF204E;
+main .product-image{
+  margin: auto;
+  width: 80%;
 }
-.sidebar a {
-  display: block;
-  text-decoration: none;
-　color: black;
-  padding: 8px;
-  border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
-  font-weight: bold;
+main .product-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+main .product-image h2{
+  font-size: 20px;
+  padding-top: 5vh;
+  color: #2a2a2a;
+  padding-bottom: 5vh;
+}
+main .product-image p{
+  font-size: 15px;
+  padding-top: 5vh;
+  color: #404040;
+  padding-bottom: 5vh;
+  line-height: 40px;
+}
+main .profile-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  margin-left: 20px;
+}
+main .profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+main .profile-card h2 {
+  margin: 10px 0;
+  font-size: 22px;
+}
+main .profile-card p {
+  color: #666;
   font-size: 14px;
-  font-family: Arial;
+  padding-top: 1vh;
+  padding-bottom: 3vh;
+  line-height: 30px;
+  text-align: left;
 }
-main .sidebar .a{
-  color: #303030;
+main .profile-card p.name{
+  text-align: center;
 }
-main .sidebar a:hover {
-  background: #FF204E;
-  color: white;
+main .profile-card .social-links {
+  margin-top: 15px;
 }
-main .product-container {
+main .profile-card .social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0073e6;
+  font-size: 20px;
+}
+main .main-wrapper {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-}
-main .product-images {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
-main .product-images img {
-  width: 100%;
+main .box {
+  background: #f0f0f0;
+  padding: 15px;
   border-radius: 8px;
+  margin-top: 10px;
 }
-main .product-details {
-  width: 100%;
-  padding-left: 10px;
-  padding-top: 20px;
+main .box h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #444;
 }
-main .product-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-main .product-description {
+main .box p {
   font-size: 14px;
   color: #555;
-  margin-bottom: 10px;
+  margin: 8px 0 0;
+  line-height: 1.5;
 }
-main .product-price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #e74c3c;
-  margin-bottom: 15px;
-}
-main .color-options {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-main .color-option {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 1px solid #ccc;
-}
-main .buttons {
-  display: flex;
-  gap: 10px;
-}
-main .button {
-  padding: 12px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  width: 150px;
-  border: none;
-}
-main .dao-button {
+main .cta-button {
+  display: block;
   background: #00224D;
   color: white;
-}
-main .dao-button:hover {
-  background: #5D0E41;
-}
-main .buy-button {
-  background: #FF204E;
-  color: white;
-}
-main .buy-button:hover {
-  background: #A0153E;
-}
-main a{
-  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-top: 20px;
   text-decoration: none;
 }
-main .button {
-  padding: 12px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  width: 150px;
-  border: none;
-}
-main .product-button {
-  background: #fff;
-  padding: 6px 5px;
-  font-size: 10px;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  width: 80px;
-  border-color: #000;
-}
-main .product-button a{
-  color: #000;
-  text-decoration: none;
-}
-main .product-button:hover {
-  background: #fff;
-}
+
+
 }
 @media screen and (max-width: 1067.98px) {
   /* メイン全体の余白調整 */
-main {
-  padding: 0
-}
+  main {
+    padding: 0
+  }
 
-/* ヘッダー部分：縦方向にスタックさせ、中央寄せに */
-main .top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
-  background-color: #f8f8f8;
-}
+  /* ヘッダー部分：縦方向にスタックさせ、中央寄せに */
+  main .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    background-color: #f8f8f8;
+  }
 
-main .top .logo {
-  display: none;
-}
+  main .top .logo {
+    display: none;
+  }
 
-/* ボタンコンテナ：縦並びに変更し、間隔を縮小 */
-main .button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-}
+  /* ボタンコンテナ：縦並びに変更し、間隔を縮小 */
+  main .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
 
-/* ボタン（リンク）の基本スタイル：フォントサイズとパディングを調整 */
-main .button-container a {
-  padding: 8px 12px;
-  font-size: 14px;
-  color: #000;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  width: 90%;
-  text-align: center;
-}
-/* クラス"a"が付いたリンク */
-main .button-container .a {
-  padding: 8px 12px;
-  font-size: 14px;
-  color: #FF204E;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  text-align: center;
-}
+  /* ボタン（リンク）の基本スタイル：フォントサイズとパディングを調整 */
+  main .button-container a {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 90%;
+    text-align: center;
+  }
+  /* クラス"a"が付いたリンク */
+  main .button-container .a {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #FF204E;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+  }
 
-/* ログインボタン：上部に余白を追加して目立たせる */
-main .login-btn {
-  background-color: #FF204E;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
-}
-main .login-btn a {
-  text-decoration: none;
-  color: #fff;
-}
-main .login-btn:hover {
-  background-color: #A0153E;
-}
+  /* ログインボタン：上部に余白を追加して目立たせる */
+  main .login-btn {
+    background-color: #FF204E;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  main .login-btn a {
+    text-decoration: none;
+    color: #fff;
+  }
+  main .login-btn:hover {
+    background-color: #A0153E;
+  }
 
-.sidebar {
-  margin-right: 20px;
-  margin-top: 30px;
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  margin-bottom: 30px;
-  text-align: center;
-}
-.sidebar h2 {
-  font-size: 18px;
-  margin-bottom: 12px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #FF204E;
-  color: #FF204E;
-}
-.sidebar a {
-  text-decoration: none;
-　color: #000;
-  padding: 8px;
-  border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
-  font-weight: bold;
-  display: inline-block;
-  margin: 5px;
-}
-main .sidebar .a{
-  color: #303030;
-}
-.sidebar a:hover {
-  background: #FF204E;
-  color: white;
-}
-.content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-.body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 10px;
-            background-color: #f8f8f8;
-            justify-content: center;
-        }
-        .product-container {
-            display: flex;
-            flex-direction: column;
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 100%;
-        }
-        .product-images {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .product-images img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .product-details {
-            padding-top: 10px;
-            text-align: center;
-        }
-        .product-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        .product-description {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 10px;
-        }
-        .product-price {
-            font-size: 18px;
-            font-weight: bold;
-            color: #e74c3c;
-            margin-bottom: 12px;
-        }
-        .color-options {
-            display: flex;
-            justify-content: center;
-            gap: 6px;
-            margin-bottom: 15px;
-        }
-        .color-option {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 1px solid #ccc;
-        }
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            align-items: center;
-        }
-        .button {
-            width: 100%;
-            max-width: 250px;
-            padding: 12px;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-            border: none;
-        }
-        .dao-button {
-            background: #00224D;
-            color: white;
-        }
-        .dao-button:hover {
-            background: #5D0E41;
-        }
-        .buy-button {
-            background: #FF204E;
-            color: white;
-        }
-        .buy-button:hover {
-            background: #A0153E;
-        }
-        main a{
-          text-decoration: none;
-          color: #fff;
-        }
-        main .product-button {
-          background: #fff;
-          padding: 6px 5px;
-          font-size: 10px;
-          border-radius: 5px;
-          text-align: center;
-          cursor: pointer;
-          width: 80px;
-          border-color: #000;
-        }
-        main .product-button a{
-          color: #000;
-          text-decoration: none;
-        }
-        main .product-button:hover {
-          background: #fff;
-        }
+  /* コンテナ全体：縦並びに変更 */
+    main .container {
+      width: 100%;
+      max-width: 100%;
+      margin: 10px auto;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 商品イメージ部分 */
+    main .product-image {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    main .product-image img {
+      width: 100%;
+      max-width: none;
+      border-radius: 10px;
+    }
+    main .product-image h2 {
+      font-size: 18px;
+      padding: 3vh 0;
+      color: #2a2a2a;
+    }
+    main .product-image p {
+      font-size: 14px;
+      padding: 3vh 0;
+      color: #404040;
+      line-height: 28px;
+    }
+
+    /* プロフィールカード部分 */
+    main .profile-card {
+      width: 90%;
+      margin: 0 auto;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    main .profile-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    main .profile-card h2 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+    main .profile-card p {
+      color: #666;
+      font-size: 13px;
+      padding: 1vh 0;
+      line-height: 24px;
+      text-align: left;
+    }
+    main .profile-card p.name {
+      text-align: center;
+    }
+    main .profile-card .social-links {
+      margin-top: 10px;
+    }
+    main .profile-card .social-links a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: #0073e6;
+      font-size: 18px;
+    }
+    main .main-wrapper {
+      padding: 15px;
+      width: 90%;
+    }
+    main .box {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    main .box h2 {
+      font-size: 16px;
+      margin: 0;
+      color: #444;
+    }
+  　main .box p {
+    color: #555;
+    margin: 8px 0 0;
+  　line-height: 1.5;
+    font-size: 13px;
+    }
+    main .cta-button {
+    display: block;
+    background: #00224D;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 14px;
+    }
+    main .main-wrapper {
+  　background: white;
+  　padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  　}
 }
 
 
