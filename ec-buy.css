@@ -681,6 +681,10 @@ main .cart-actions {
   justify-content: space-between;
   margin-top: 20px;
 }
+main .cart-actions a{
+  color: #fff;
+  text-decoration: none;
+}
 main .btn {
   padding: 10px;
   width: 48%;
@@ -848,6 +852,10 @@ main .btn-buy {
     justify-content: space-between;
     margin-top: 20px;
   }
+  main .cart-actions a{
+    color: #fff;
+    text-decoration: none;
+}
 
   main .btn {
     padding: 10px;
